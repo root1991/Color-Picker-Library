@@ -54,6 +54,9 @@ public class ColorPicker extends PopupWindow {
         GridView gridViewMainColors = (GridView) popupView.findViewById(R.id.gridView_main_colors);
         final GridView gridViewShadeColors = (GridView) popupView.findViewById(R.id.gridView_shade_colors);
 
+        gridViewMainColors.setNumColumns(builder.mainColors.size());
+        gridViewShadeColors.setNumColumns(builder.mainColors.size());
+
         ColorsAdapter colorsAdapter = new ColorsAdapter(builder.context, R.layout.item_color, builder.mainColors);
         shadeColors = getListOfShadeColors(Color.RED);
         shadeColorsAdapter = new ColorsAdapter(builder.context, R.layout.item_color,
@@ -88,7 +91,7 @@ public class ColorPicker extends PopupWindow {
 
 
     private List<Integer> getListOfShadeColors(int color) {
-        int shadesQuantity = 7;
+        int shadesQuantity = builder.mainColors.size();
         List<Integer> shadeColors = new ArrayList<Integer>();
         float[] dividers = {1.0f, 1.3f, 1.4f, 1.6f, 2.0f, 2.5f, 3.5f};
 

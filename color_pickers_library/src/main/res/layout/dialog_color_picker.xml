@@ -9,14 +9,12 @@
     <GridView
         android:id="@+id/gridView_main_colors"
         android:layout_width="wrap_content"
-        android:numColumns="7"
         android:layout_height="wrap_content">
     </GridView>
 
     <GridView
         android:id="@+id/gridView_shade_colors"
         android:layout_width="wrap_content"
-        android:numColumns="7"
         android:layout_height="wrap_content">
     </GridView>
 
