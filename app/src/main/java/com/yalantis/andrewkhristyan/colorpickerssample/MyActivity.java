@@ -27,7 +27,9 @@ public class MyActivity extends Activity implements ColorSelectedListener {
         final ColorPicker picker = new ColorPicker.ColorPickerBuilder(this)
                 .colors(getMainColors()).setHolderView(textView)
                 .colorsListener(this)
-                .backgroundColor(getResources().getDrawable(android.R.color.black))
+                .backgroundColor(getResources().getDrawable(android.R.color.holo_blue_light))
+                .animation(true)
+                .itemType(ColorPicker.ItemType.CIRCLE)
                 .build();
 
         textView.setOnClickListener(new View.OnClickListener() {
@@ -39,31 +41,17 @@ public class MyActivity extends Activity implements ColorSelectedListener {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     private List<Integer> getMainColors() {
         List<Integer> mainColors = new ArrayList<Integer>();
         mainColors.add(Color.CYAN);
         mainColors.add(Color.BLUE);
         mainColors.add(Color.RED);
         mainColors.add(Color.YELLOW);
+        mainColors.add(Color.CYAN);
+        mainColors.add(Color.BLUE);
+        mainColors.add(Color.RED);
+        mainColors.add(Color.YELLOW);
+        mainColors.add(Color.CYAN);
         return mainColors;
     }
 
