@@ -29,7 +29,7 @@ public class MyActivity extends Activity implements ColorSelectedListener {
                 .colorsListener(this)
                 .backgroundColor(getResources().getDrawable(android.R.color.holo_blue_light))
                 .animation(true)
-                .itemType(ColorPicker.ItemType.CIRCLE)
+                .itemType(ColorPicker.ItemType.SHAPE)
                 .build();
 
         textView.setOnClickListener(new View.OnClickListener() {
