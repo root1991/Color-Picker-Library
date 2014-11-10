@@ -33,11 +33,11 @@ public class ColorPicker extends PopupWindow {
     public ColorPicker(ColorPickerBuilder builder) {
         super(builder.context);
         this.builder = builder;
-        initPopuView();
+        initPopupView();
     }
 
 
-    private void initPopuView() {
+    private void initPopupView() {
         View popupView = LayoutInflater.from(builder.context).inflate(R.layout.dialog_color_picker, null);
 
         setContentView(popupView);

@@ -27,7 +27,7 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file:///Macintosh HD/Users/andrewkhristyan/Color-Picker-Library/color_pickers_library/build/outputs/aar/color_pickers_library.aar")
+            repository(url: "https://github.com/root1991/Color-Picker-Library.git")
             pom.groupId = 'com.akh.yalantis'
             pom.artifactId = 'color-picker-lib'
             pom.version = '0.1.0'
