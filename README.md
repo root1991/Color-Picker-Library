@@ -1,5 +1,7 @@
 # Color Picker Library
 
+![DashPicker](http://s4.postimg.org/8vnlrv33x/Screenshot_2014_11_10_12_39_24.png)
+
 You can use this for changing colors of text or backgrounds.
 
   - extends PopupWindow
